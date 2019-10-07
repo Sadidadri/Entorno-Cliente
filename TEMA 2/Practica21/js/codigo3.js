@@ -4,7 +4,7 @@ pantalla los doce nombres utilizando la función alert().
  *@author Adrian Moya Moruno
  */
 
-var meses = ["Enero","Febrero","Marzo","Abril",
+let meses = ["Enero","Febrero","Marzo","Abril",
               "Mayo","Junio","Julio","Agosto",
               "Septiembre","Octubre","Noviembre","Diciembre"];
 

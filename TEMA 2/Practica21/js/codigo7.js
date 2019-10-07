@@ -6,8 +6,8 @@ Utilizando la estructura for, crear un script que calcule el factorial de un nú
 
  *@author Adrian Moya Moruno
  */
-var numero = prompt("Introduzca numero y calculare su factorial");
-var resultado = 1;
+let numero = prompt("Introduzca numero y calculare su factorial");
+let resultado = 1;
 for (let i = numero; i > 0; i--) {
     resultado *= i;
 }

@@ -9,8 +9,8 @@ elementos numéricos
  *@author Adrian Moya Moruno
  */
 
-var valores = [true, 5, false, "hola","adios", 2];
-var textoMayor;
+let valores = [true, 5, false, "hola","adios", 2];
+let textoMayor;
 
 //Determinar cual es mayor
 if (valores[3].length > valores[4].length){

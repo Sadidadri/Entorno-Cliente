@@ -22,11 +22,11 @@ correctos.
  *@author Adrian Moya Moruno
  */
 
-var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N',
+let letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N',
 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
 
-var numeroDNI = prompt("Introduzca numero DNI");
-var letra = prompt("Introduzca la letra de su DNI");
+let numeroDNI = prompt("Introduzca numero DNI");
+let letra = prompt("Introduzca la letra de su DNI");
 
 if(numeroDNI <0 || numeroDNI >= 99999999){
     console.log("El numero proporcionado no es válido.");
