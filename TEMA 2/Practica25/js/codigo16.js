@@ -1,12 +1,11 @@
-function informacion(elEvento) {
+{
+  function informacion(elEvento) {
   let evento = elEvento;
 
   let coordenadaX = evento.clientX;
   let coordenadaY = evento.clientY;
 
-  let dimensiones = tamanoVentanaNavegador();
-  let tamanoX = dimensiones[0];
-  let tamanoY = dimensiones[1];
+  let [tamanoX, tamanoY] = tamanoVentanaNavegador();
 
   let posicionHorizontal = "";
   let posicionVertical = "";
@@ -29,16 +28,16 @@ function informacion(elEvento) {
 }
 
 function muestraInformacion(mensaje) {
-  document.getElementById("info").innerHTML = '<h1>'+mensaje[0]+'</h1>';
+  let info = document.getElementById("info");
+  info.innerHTML = '<h1>'+mensaje[0]+'</h1>';
   for(let i=1; i<mensaje.length; i++) {
-    document.getElementById("info").innerHTML += '<p>'+mensaje[i]+'</p>';
+    info.innerHTML += '<p>'+mensaje[i]+'</p>';
   }
 }
 
 function tamanoVentanaNavegador(){
-  let dimensiones = [];
-  dimensiones = [window.innerWidth, window.innerHeight];
-  return dimensiones;
+  return [window.innerWidth, window.innerHeight];
 }
 
 document.onclick = informacion;
+}

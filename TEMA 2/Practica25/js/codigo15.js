@@ -3,7 +3,6 @@ function informacion(elEvento) {
   switch(evento.type) {
     case 'mousemove':
       document.getElementById('info').style.backgroundColor = '#FFFFFF';
-      let ie = navigator.userAgent.toLowerCase().indexOf('msie')!=-1;
       let coordenadaXrelativa, coordenadaYrelativa, coordenadaXabsoluta, coordenadaYabsoluta;
       
       coordenadaXabsoluta = evento.pageX;
