@@ -22,18 +22,20 @@ correctos.
  *@author Adrian Moya Moruno
  */
 
-let letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N',
-'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+{
+    let letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N',
+        'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
 
-let numeroDNI = prompt("Introduzca numero DNI");
-let letra = prompt("Introduzca la letra de su DNI");
+    let numeroDNI = prompt("Introduzca numero DNI");
+    let letra = prompt("Introduzca la letra de su DNI");
 
-if(numeroDNI <0 || numeroDNI >= 99999999){
-    console.log("El numero proporcionado no es válido.");
-}else{
-    if(letra == letras[numeroDNI%23]){
-        console.log("El DNI es correcto.");
-    }else{
-        console.log("La letra que se ha indicado no es correcta.")
+    if (numeroDNI < 0 || numeroDNI >= 99999999) {
+        console.log("El numero proporcionado no es válido.");
+    } else {
+        if (letra == letras[numeroDNI % 23]) {
+            console.log("El DNI es correcto.");
+        } else {
+            console.log("La letra que se ha indicado no es correcta.")
+        }
     }
 }

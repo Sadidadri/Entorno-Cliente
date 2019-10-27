@@ -5,30 +5,41 @@ sólo por mayúsculas, sólo por minúsculas o por una mezcla de ambas.
  *
  *@author Adrian Moya Moruno
  */
+{
 
- let cad = prompt("Introduzca una cadena");
- console.log(compruebaCadena(cad));
+   let cadena;
+   let boton;
 
- function compruebaCadena(cadena) {
-    contieneMayus = false;
-    contieneMinus = false;
+   function compruebaCadena() {
+      cadena = document.getElementById("cadena").value;
+      contieneMayus = false;
+      contieneMinus = false;
 
-     for (let i = 0; i < cadena.length; i++) {
-         if (cadena.charAt(i) == cadena.charAt(i).toUpperCase() ) {
-             contieneMayus = true;
+      for (let i = 0; i < cadena.length; i++) {
+         if (cadena.charAt(i) == cadena.charAt(i).toUpperCase()) {
+            contieneMayus = true;
          }
-         else if (cadena.charAt(i) == cadena.charAt(i).toLowerCase()){
+         else if (cadena.charAt(i) == cadena.charAt(i).toLowerCase()) {
             contieneMinus = true;
          }
-     }
+      }
 
-     if (contieneMayus && contieneMinus){
-        return "La cadena está formada por mayusculas y minusculas";
-     }
-     else if (contieneMayus){
-        return "La cadena está formada por mayusculas";
-     }
-     else (contieneMinus){
-        return "La cadena está formada por minusculas";
-     }
- }
+      if (contieneMayus && contieneMinus) {
+         console.log("La cadena está formada por mayusculas y minusculas");
+      }
+      else if (contieneMayus) {
+         console.log("La cadena está formada por mayusculas");
+      }
+      else{
+         console.log("La cadena está formada por minusculas");
+      }
+         
+   }
+
+   let inicio = function () {
+      boton = document.getElementById("boton");
+      boton.addEventListener("click", compruebaCadena);
+   }
+   document.addEventListener("DOMContentLoaded", inicio);
+
+}

@@ -4,26 +4,39 @@
  * Mejorar el ejemplo anterior indicando en todo momento al usuario el número de
  * caracteres que aún puede escribir. Además, se debe permitir pulsar las teclas 
  * Backspace, Supr. y las flechas horizontales cuando se haya llegado al máximo número de caracteres.
- *
+ * @author Adrian Angel Moya Moruno
  */
-{   
+{
+  let elementoTArea;
+  let elementoSpan;
+  const NUMERO_CARACTERES = 100;
+  /**
+   * Funcion que limita el contenido del textarea
+   */
 
-    function limita(maximoCaracteres) {
-        let elemento = document.getElementById("texto");
-        let numeroCaracteres = elemento.value.length;
-        
-        if(numeroCaracteres >= maximoCaracteres ) {
-          return false;
-        }
-        else {
-          document.getElementsByTagName("span")[1].innerText = maximoCaracteres - (numeroCaracteres+1);
-          return true;
-        }
-        
-      }
-      
-    window.onload = function() {
-        
+  let limita = function(evento) {
+    ev = evento.key;
+    caracteresDisponibles = NUMERO_CARACTERES - (elementoTArea.textLength+1);
+    console.log(caracteresDisponibles);
+    if(ev == "ArrowLeft" || ev == "ArrowRight" || ev == "Backspace" || ev == "Delete"){
+      elementoSpan.innertHTML = "<span>"+caracteresDisponibles+"</span>";
+      return true; //Continua el textarea
     }
-    
+    else if(elementoTArea.textLength >= 100){
+      elementoSpan.innertHTML = "<span>"+caracteresDisponibles+"</span>";
+      return false;//Bloquea el textArea
+    }
+    else{
+      elementoSpan.innerHTML = caracteresDisponibles;
+      return true;//Continua textArea
+    }
+  }
+
+  let inicio = function () {
+    elementoTArea = document.getElementById("texto");
+    elementoSpan = document.getElementById("caracteres");
+
+    document.addEventListener("keydown", limita);
+  }
+  document.addEventListener("DOMContentLoaded", inicio);
 }

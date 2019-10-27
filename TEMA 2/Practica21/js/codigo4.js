@@ -8,23 +8,24 @@ necesarios para obtener un resultado true y otro resultado false
 elementos numéricos
  *@author Adrian Moya Moruno
  */
+{
+    let valores = [true, 5, false, "hola", "adios", 2];
+    let textoMayor;
 
-let valores = [true, 5, false, "hola","adios", 2];
-let textoMayor;
-
-//Determinar cual es mayor
-if (valores[3].length > valores[4].length){
-    textoMayor = valores[3];
-}else{
-    textoMayor = valores[4];
+    //Determinar cual es mayor
+    if (valores[3].length > valores[4].length) {
+        textoMayor = valores[3];
+    } else {
+        textoMayor = valores[4];
+    }
+    console.log("El texto mayor es " + textoMayor);
+    //True y False
+    console.log(valores[0] == valores[2]);
+    console.log(valores[0] != valores[2]);
+    //5 operaciones:
+    console.log("Suma: " + (valores[1] + valores[5]));
+    console.log("Resta: " + (valores[1] - valores[5]));
+    console.log("Multiplicacion: " + (valores[1] * valores[5]));
+    console.log("Division: " + (valores[1] / valores[5]));
+    console.log("Modulo: " + (valores[1] % valores[5]));
 }
-console.log("El texto mayor es "+textoMayor);
-//True y False
-console.log(valores[0]==valores[2]);
-console.log(valores[0]!=valores[2]);
-//5 operaciones:
-console.log("Suma: "+(valores[1]+valores[5]));
-console.log("Resta: "+(valores[1]-valores[5]));
-console.log("Multiplicacion: "+(valores[1]*valores[5]));
-console.log("Division: "+(valores[1]/valores[5]));
-console.log("Modulo: "+(valores[1]%valores[5]));

@@ -6,10 +6,12 @@ Utilizando la estructura for, crear un script que calcule el factorial de un nú
 
  *@author Adrian Moya Moruno
  */
-let numero = prompt("Introduzca numero y calculare su factorial");
-let resultado = 1;
-for (let i = numero; i > 0; i--) {
-    resultado *= i;
-}
+{
+    let numero = prompt("Introduzca numero y calculare su factorial");
+    let resultado = 1;
+    for (let i = numero; i > 0; i--) {
+        resultado *= i;
+    }
 
-console.log("El factorial de "+numero+" es "+resultado);
+    console.log("El factorial de " + numero + " es " + resultado);
+}

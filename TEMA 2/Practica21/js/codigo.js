@@ -10,5 +10,7 @@ activado el soporte de JavaScript
 * @author Adrian angel Moya Moruno
 */
 
-console.log("Hola mundo");
-console.log("Soy el primer script");
+{
+    console.log("Hola mundo");
+    console.log("Soy el primer script");
+}

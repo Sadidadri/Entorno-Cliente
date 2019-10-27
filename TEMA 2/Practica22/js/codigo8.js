@@ -5,15 +5,23 @@ resultado devuelto por la función.
  *@author Adrian Moya Moruno
  */
 
-let num = prompt("Introduzca un numero");
-console.log(parOImpar(num));
-
-
-function parOImpar(numero) {
-    if (numero%2 == 0) {
-        return "El numero es par";
+ {
+    let num;
+  
+    let parOImpar = function () {
+        num = document.getElementById("num");
+        if (num.value%2 == 0) {
+            console.log("El numero es par");
+        }
+        else{
+            console.log("El numero es impar");
+        }
     }
-    else{
-        return "El numero es impar";
+
+    let inicio = function(){
+        boton.addEventListener("click",parOImpar)
     }
-}
+    document.addEventListener("DOMContentLoaded",inicio);
+
+    
+ }

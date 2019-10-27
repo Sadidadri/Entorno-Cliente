@@ -5,5 +5,7 @@ funcionamiento del script sea el mismo.
 2. El mensaje mostrado sea el de la siguiente imagen:
  *@author Adrian Moya Moruno
  */
-let mensaje = "Hola Mundo! \nQué facil es incluir \'comillas simples\' \ny \"comillas dobles\"";
-console.log(mensaje);
+{
+    let mensaje = "Hola Mundo! \nQué facil es incluir \'comillas simples\' \ny \"comillas dobles\"";
+    console.log(mensaje);
+}

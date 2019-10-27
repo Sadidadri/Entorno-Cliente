@@ -6,20 +6,29 @@ palíndromo complejo: "La ruta nos aporto otro paso natural".
  *@author Adrian Moya Moruno
  */
 
- let cad = prompt("Introduzca una cadena: ");
- if (esPalindromo(cad.toLowerCase().split())){ //Para utilizar la cadena en minuscula y eliminar espacios.
-     console.log("La cadena "+cad+" es palíndroma");
- }
- else{
-     console.log("La cadena "+cad+" NO es palíndroma");
- }
+{
+    let cadena;
 
- function esPalindromo(cadena){
-     esPalindroma = true;
-     for (let i=0;i<cadena.length;i++){
-		if(cadena[i]!=cadena[cadena.length-i-1]){
-			esPalindroma = false;
-		}
+
+    let esPalindromo = function () {
+        cadena = document.getElementById("cadena").value;
+        cadena = cadena.toLowerCase();//Para utilizar la cadena en minuscula y eliminar espacios.
+        esPalindroma = true;
+        for (let i = 0; i < cadena.length; i++) {
+            if (cadena[i] != cadena[cadena.length - i - 1]) {
+                esPalindroma = false;
+            }
+        }
+        if (esPalindroma) { 
+            console.log("La cadena " + cadena + " es palíndroma");
+        }
+        else {
+            console.log("La cadena " + cadena + " NO es palíndroma");
+        }
     }
-    return esPalindroma;
- }
+    let inicio = function () {
+        boton = document.getElementById("boton");
+        boton.addEventListener("click", esPalindromo);
+    }
+    document.addEventListener("DOMContentLoaded", inicio);
+}
