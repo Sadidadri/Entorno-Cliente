@@ -9,11 +9,10 @@
 {
   let elementoTArea;
   let elementoSpan;
-  const NUMERO_CARACTERES = 100;
+  const NUMERO_CARACTERES = 10;
   /**
    * Funcion que limita el contenido del textarea
    */
-
   let limita = function(evento) {
     ev = evento.key;
     caracteresDisponibles = NUMERO_CARACTERES - (elementoTArea.textLength+1);
@@ -22,9 +21,9 @@
       elementoSpan.innertHTML = "<span>"+caracteresDisponibles+"</span>";
       return true; //Continua el textarea
     }
-    else if(elementoTArea.textLength >= 100){
+    else if(elementoTArea.textLength >= NUMERO_CARACTERES){
       elementoSpan.innertHTML = "<span>"+caracteresDisponibles+"</span>";
-      return false;//Bloquea el textArea
+      evento.preventDefault()//Bloquea el textArea
     }
     else{
       elementoSpan.innerHTML = caracteresDisponibles;
